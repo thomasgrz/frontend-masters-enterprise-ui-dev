@@ -19,7 +19,10 @@ jobs:
         name: Install modules from npm
       - run: npm run build
         name: Build the application
+
   unit-test:
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout respository
         uses: actions/checkout@v3
       - name: Setup Node
